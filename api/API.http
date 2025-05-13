@@ -1,0 +1,44 @@
+GET http://localhost:3001/api/films HTTP/1.1
+### Retrieve the list of all the available films.
+GET http://localhost:3001/api/films/99 HTTP/1.1
+### filter film by condition
+GET http://localhost:3001/api/films?filter=lastmonth HTTP/1.1
+### filter film by condition
+
+POST http://localhost:3001/api/films HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Guardians of the Galaxy Vol.3",
+    "favorite": 1,
+    "watchDate": "2024-02-01",
+    "rating": 5
+}
+### Create a new film
+
+PATCH http://localhost:3001/api/films/3/favorite HTTP/1.1
+content-type: application/json
+
+{
+    "favorite": 1
+}
+### change if is fav
+PATCH http://localhost:3001/api/films/3/rating HTTP/1.1
+content-type: application/json
+
+{
+    "deltaRating": -10
+}
+### change films rating
+DELETE http://localhost:3001/api/films/ HTTP/1.1
+### delete films by id
+PATCH http://localhost:3001/api/films/3 HTTP/1.1
+content-type: application/json
+
+{
+    "title": "big dick",
+    "favorite": 1,
+    "watchDate": "2024-07-01",
+    "rating": 3
+}
+### update films attr

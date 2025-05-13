@@ -8,6 +8,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "^5.3.6",
     "dayjs": "^1.11.13",
     "express": "^5.1.0",
     "morgan": "^1.10.0",
